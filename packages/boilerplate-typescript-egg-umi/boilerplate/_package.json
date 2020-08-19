@@ -22,7 +22,7 @@
     "test-local": "egg-bin test",
     "lint": "npm run be-lint && npm run fe-lint",
     "be-lint": "eslint --fix --ext .ts --ignore-pattern 'app/view/' .",
-    "fe-lint": "eslint --fix --ext .ts --ext .tsx -c app/view/.eslintrc  app/view/",
+    "fe-lint": "eslint --fix --ext .ts --ext .tsx -c app/view/.eslintrc app/view/",
     "fe-prettier": "prettier --write --config app/view/.prettierrc 'app/view/**/*.{js,jsx,tsx,ts,less,md,json}'"
   },
   "gitHooks": {
