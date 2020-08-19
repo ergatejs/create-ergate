@@ -1,12 +1,12 @@
 {
   "name": "@ergatejs/boilerplate-typescript",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1",
   "description": "boilerplate for typescript",
   "scripts": {
     "lint": "eslint .",
     "ci": "npm run lint && npm run ci-boilerplate",
     "ci-boilerplate": "npm run build && npm run install-deps && cd dist && npm run ci",
-    "install-deps": "cd dist && npm i",    
+    "install-deps": "cd dist && npm i",
     "clean": "rm -rf boilerplate/.idea boilerplate/node_modules",
     "clean-dist": "rm -rf dist",
     "build": "npm run clean && egg-init dist --force --silent --template=./ "
