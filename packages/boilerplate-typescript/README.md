@@ -1,3 +1,3 @@
-# `@ergatejs/boilerplate-typescript`
+## @ergatejs/boilerplate-typescript
 
 > boilerplate for typescript.
