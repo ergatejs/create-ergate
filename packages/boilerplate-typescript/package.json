@@ -6,12 +6,13 @@
     "lint": "eslint .",
     "ci": "npm run lint && npm run ci-boilerplate",
     "ci-boilerplate": "npm run build && npm run install-deps && cd dist && npm run ci",
-    "install-deps": "cd dist && npm i",
+    "install-deps": "cd dist && npm i",    
     "clean": "rm -rf boilerplate/.idea boilerplate/node_modules",
+    "clean-dist": "rm -rf dist",
     "build": "npm run clean && egg-init dist --force --silent --template=./ "
   },
   "devDependencies": {
-    "egg-init": "^2.0.0",
+    "egg-init": "^2.2.0",
     "eslint": "^7.7.0",
     "eslint-config-egg": "^8.0.1"
   },
