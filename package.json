@@ -9,7 +9,10 @@
     "lerna": "^3.22.1"
   },
   "scripts": {
-    "ci": "lerna bootstrap && lerna run ci --stream"
+    "ci": "npm run bootstrap && npm run run-ci && npm run run-clean",
+    "bootstrap": "lerna bootstrap",
+    "run-ci": "lerna run ci --stream",
+    "run-clean": "lerna run clean-dist --stream"
   },
   "ci": {
     "type": "github",
