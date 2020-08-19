@@ -1,0 +1,30 @@
+{
+  "name": "@ergatejs/boilerplate-typescript-egg",
+  "version": "0.0.0",
+  "description": "boilerplate for typescript egg",
+  "scripts": {
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run ci-boilerplate",
+    "ci-boilerplate": "npm run build && npm run install-deps && cd dist && npm run ci",
+    "install-deps": "cd dist && npm i",
+    "clean": "rm -rf boilerplate/.idea boilerplate/logs boilerplate/node_modules boilerplate/run",
+    "build": "npm run clean && egg-init dist --force --silent --template=./ "
+  },
+  "devDependencies": {
+    "egg-init": "^2.0.0",
+    "eslint": "^7.7.0",
+    "eslint-config-egg": "^8.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/ergatejs/create-ergate#readme",
+  "bugs": {
+    "url": "https://github.com/ergatejs/create-ergate/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ergatejs/create-ergate.git"
+  },
+  "author": "Suyi <thonatos.yang@gmail.com>"
+}
