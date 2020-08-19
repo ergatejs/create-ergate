@@ -8,6 +8,9 @@
     "egg-ci": "^1.15.0",
     "lerna": "^3.22.1"
   },
+  "scripts": {
+    "ci": "lerna bootstrap && lerna run ci --stream"
+  },
   "ci": {
     "type": "github",
     "os": {

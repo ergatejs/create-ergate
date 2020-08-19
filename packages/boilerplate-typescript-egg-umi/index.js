@@ -2,13 +2,13 @@
 
 module.exports = {
   name: {
-    desc: 'project name',
+    desc: 'project_name',
   },
   description: {
-    desc: 'project description',
+    desc: 'project_description',
   },
   author: {
-    desc: 'project author',
+    desc: 'project_author',
   },
   keys: {
     desc: 'cookie security keys',
