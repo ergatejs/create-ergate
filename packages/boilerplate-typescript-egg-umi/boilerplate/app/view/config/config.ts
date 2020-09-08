@@ -17,7 +17,7 @@ export default defineConfig({
   },
 
   layout: {
-    name: 'Ergate.js',
+    name: '{{name}}',
     logo: 'https://implementsio.oss-cn-shenzhen.aliyuncs.com/static/media/ergate.svg',
     locale: true,
     theme: 'pro',

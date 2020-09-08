@@ -19,5 +19,5 @@ const RightRender = (initInfo: any) => {
 export default {
   rightRender: RightRender,
   logout: () => {},
-  footerRender: () => <DefaultFooter links={false} copyright="Ergate.js" />,
+  footerRender: () => <DefaultFooter links={false} copyright="{{name}}" />,
 };
