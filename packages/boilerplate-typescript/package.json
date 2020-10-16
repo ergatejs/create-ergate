@@ -1,6 +1,6 @@
 {
   "name": "@ergatejs/boilerplate-typescript",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "boilerplate for typescript",
   "scripts": {
     "lint": "eslint .",
