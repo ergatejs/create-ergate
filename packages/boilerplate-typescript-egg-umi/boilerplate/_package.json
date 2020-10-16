@@ -87,6 +87,6 @@
   "eslintIgnore": [
     "coverage"
   ],
-  "author": "Suyi <thonatos.yang@gmail.com>",
+  "author": "{{author}}",
   "license": "MIT"
 }
