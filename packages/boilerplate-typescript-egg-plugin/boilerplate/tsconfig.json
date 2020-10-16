@@ -1,0 +1,9 @@
+{
+  "extends": "@eggjs/tsconfig",
+  "compilerOptions": {    
+    "esModuleInterop": false
+  },
+  "exclude": [
+    "node_modules*"    
+  ]
+}
