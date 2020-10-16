@@ -23,7 +23,7 @@ $ npx create-egg showcase-egg --package=@ergatejs/boilerplate-typescript-egg-plu
 
 ## Contributors
 
-[![contributors](https://badges.implements.io/api/contributors?org=ergatejs&repo=create-ergate&width=1280&size=48&padding=6&type=jpeg)](https://github.com/eggjs/egg/graphs/contributors)
+[![contributors](https://badges.implements.io/api/contributors?org=ergatejs&repo=create-ergate&width=1280&size=48&padding=6&type=jpeg)](https://github.com/ergatejs/create-ergate/graphs/contributors)
 
 ## How to Contribute
 
