@@ -7,10 +7,10 @@ module.exports = {
   },
   description: {
     desc: 'project description',
-    default: 'awesome plugin for egg'
+    default: 'awesome plugin for egg',
   },
   author: {
     desc: 'project author',
-    default: 'Author <author@domain.com>'
+    default: 'Author <author@domain.com>',
   },
 };

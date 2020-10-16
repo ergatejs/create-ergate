@@ -7,10 +7,10 @@ module.exports = {
   },
   description: {
     desc: 'package description',
-    default: 'awesome package'
+    default: 'awesome package',
   },
   author: {
     desc: 'package author',
-    default: 'Author <author@domain.com>'
+    default: 'Author <author@domain.com>',
   },
 };

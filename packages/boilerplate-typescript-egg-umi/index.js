@@ -7,11 +7,11 @@ module.exports = {
   },
   description: {
     desc: 'project description',
-    default: 'awesome project for egg'
+    default: 'awesome project for egg',
   },
   author: {
     desc: 'project author',
-    default: 'Author <author@domain.com>'
+    default: 'Author <author@domain.com>',
   },
   keys: {
     desc: 'cookie security keys',
