@@ -9,11 +9,12 @@
   },
   "scripts": {
     "autod": "autod",
-    "start": "egg-scripts start --daemon --title={{name}}",
+    "start": "egg-scripts start --title={{name}} --env prod",
+    "startd": "egg-scripts start --daemon --title={{name}} --env prod",
     "stop": "egg-scripts stop --title={{name}}",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
-    "build": "APP_ROOT=$PWD/app/view umi build",
+    "build": "APP_ROOT=$PWD/app/view umi build && npm run tsc",
     "cov": "egg-bin cov",
     "clean": "ets clean",
     "ci": "npm run lint && npm run cov",
@@ -61,6 +62,7 @@
     "eslint-config-egg": "^8.0.0",
     "eslint-import-resolver-typescript": "^2.0.0",
     "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.0",
@@ -68,7 +70,7 @@
     "prettier": "^2.0.4",
     "tslib": "^1.9.0",
     "typescript": "^3.0.0",
-    "umi": "^3.0.16"
+    "umi": "^3.2.0"
   },
   "engines": {
     "node": ">=8.9.0"
