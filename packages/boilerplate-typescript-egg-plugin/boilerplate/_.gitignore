@@ -1,0 +1,34 @@
+## common
+logs/
+npm-debug.log
+node_modules/
+coverage/
+.idea/
+run/
+logs/
+.DS_Store
+.vscode
+*.swp
+*.lock
+*.js
+.env
+!.autod.conf.js
+
+## plugin
+app.js
+agent.js
+app/**/*.js
+lib/**/*.js
+config/**/*.js
+test/**/*.js
+
+app.d.ts
+agent.d.ts
+app/**/*.d.ts
+lib/**/*.d.ts
+config/**/*.d.ts
+test/**/*.d.ts
+typings/**/*.d.ts
+
+# dotenv
+.env

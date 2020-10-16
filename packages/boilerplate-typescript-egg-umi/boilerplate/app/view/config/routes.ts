@@ -1,6 +1,6 @@
 import { IRoute } from 'umi';
 
-export const routes: IRoute[] = [
+const routes: IRoute[] = [
   {
     path: '/info',
     exact: true,
@@ -36,3 +36,5 @@ export const routes: IRoute[] = [
     hideInMenu: false,
   },
 ];
+
+export default routes;

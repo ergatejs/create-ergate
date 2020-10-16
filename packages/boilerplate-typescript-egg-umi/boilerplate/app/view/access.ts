@@ -1,4 +1,4 @@
-export default function (initialState: any) {
+export default (initialState: any) => {
   const { access } = initialState;
   return access;
 }

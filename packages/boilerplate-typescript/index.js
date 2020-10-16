@@ -3,14 +3,14 @@
 module.exports = {
   name: {
     desc: 'package name',
-    default: 'package_name',
+    default: 'packageName',
   },
   description: {
     desc: 'package description',
-    default: 'package_description',
+    default: 'awesome package',
   },
   author: {
-    desc: 'author',
-    default: 'package_author',
+    desc: 'package author',
+    default: 'Author <author@domain.com>',
   },
 };

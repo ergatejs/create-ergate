@@ -1,0 +1,63 @@
+{
+  "name": "egg-{{name}}",
+  "version": "1.0.0",
+  "description": "{{description}}",
+  "private": true,
+  "eggPlugin": {
+    "name": "{{name}}"
+  },
+  "types": "index.d.ts",
+  "files": [
+    "app",
+    "config",
+    "lib",
+    "typings",
+    "app.js",
+    "agent.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "tsc": "npm run clean && ets -o && tsc -p tsconfig.json",
+    "test": "npm run tsc && egg-bin test",
+    "cov": "npm run tsc && egg-bin cov",
+    "ci": "npm run cov",
+    "clean": "del './{app,config,lib,test,typings}/**/*.{js,d.ts}' && del './{app,agent}.{js,d.ts}'",
+    "lint": "eslint --fix --ext .ts .",
+    "prepublish": "npm run tsc"
+  },
+  "gitHooks": {
+    "pre-commit": ""
+  },
+  "dependencies": {    
+  },
+  "devDependencies": {    
+    "@eggjs/tsconfig": "^1.0.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/mocha": "^5.2.7",
+    "del-cli": "^2.0.0",
+    "dotenv": "^8.2.0",
+    "egg": "^2.22.2",
+    "egg-bin": "^4.13.0",
+    "egg-ci": "^1.15.0",
+    "egg-mock": "^3.23.1",
+    "eslint": "^7.7.0",
+    "eslint-config-egg": "^8.0.0",    
+    "typescript": "^3.2.2"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "ci": {
+    "type": "github",
+    "os": {
+      "github": "linux"
+    },
+    "version": "12"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },  
+  "author": "{{author}}",
+  "license": "MIT"
+}

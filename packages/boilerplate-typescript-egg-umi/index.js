@@ -2,13 +2,16 @@
 
 module.exports = {
   name: {
-    desc: 'project_name',
+    desc: 'project name',
+    default: 'pluginName',
   },
   description: {
-    desc: 'project_description',
+    desc: 'project description',
+    default: 'awesome project for egg',
   },
   author: {
-    desc: 'project_author',
+    desc: 'project author',
+    default: 'Author <author@domain.com>',
   },
   keys: {
     desc: 'cookie security keys',

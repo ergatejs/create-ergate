@@ -13,10 +13,12 @@ you can use `npm init` or `npx create-<initializer>` to init a project .
 # use npm init
 $ npm init egg showcase-ts --package=@ergatejs/boilerplate-typescript
 $ npm init egg showcase-egg --package=@ergatejs/boilerplate-typescript-egg
+$ npm init egg showcase-egg --package=@ergatejs/boilerplate-typescript-egg-plugin
 
 # use npx
 $ npx create-egg showcase-ts --package=@ergatejs/boilerplate-typescript
 $ npx create-egg showcase-egg --package=@ergatejs/boilerplate-typescript-egg
+$ npx create-egg showcase-egg --package=@ergatejs/boilerplate-typescript-egg-plugin
 ```
 
 ## Contributors
