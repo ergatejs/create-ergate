@@ -1,9 +1,11 @@
 export default {
   'site.title': 'Boilerplate',
-  'site.index': 'Index',
-  'menu.index': 'Home',
-  'site.info': 'Info',
-  'menu.info': 'Info',
+  
+  'site.index': 'Index',  
+  'site.info': 'Info',  
   'site.login': 'Login',
+
+  'menu.index': 'Home',
+  'menu.info': 'Info',
   'menu.login': 'Login',
 };

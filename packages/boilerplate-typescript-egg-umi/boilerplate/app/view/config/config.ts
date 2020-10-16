@@ -1,6 +1,10 @@
 import { defineConfig } from 'umi';
+import routes from './routes';
 
 export default defineConfig({
+  // project
+  title: 'site.title',
+
   // base
   hash: true,
   singular: true,
@@ -16,6 +20,7 @@ export default defineConfig({
     immer: true,
   },
 
+  // layout
   layout: {
     name: '{{name}}',
     logo: 'https://implementsio.oss-cn-shenzhen.aliyuncs.com/static/media/ergate.svg',
@@ -30,6 +35,7 @@ export default defineConfig({
     fixedHeader: false,
   },
 
+  // locale
   locale: {
     default: 'zh-CN',
     antd: true,
@@ -42,43 +48,5 @@ export default defineConfig({
     dark: false,
   },
 
-  // project
-  title: 'site.title',
-
-  routes: [
-    {
-      path: '/',
-      exact: true,
-      icon: 'home',
-      name: 'Index',
-      title: 'site.index',
-      locale: 'menu.index',
-      access: 'canReadIndex',
-      component: '@/page/index',
-      hideInNav: false,
-      hideInMenu: false,
-    },
-    {
-      path: '/info',
-      exact: true,
-      icon: 'setting',
-      name: 'Info',
-      title: 'site.info',
-      locale: 'menu.info',
-      access: 'canReadInfo',
-      component: '@/page/info',
-      hideInNav: false,
-      hideInMenu: false,
-    },
-    {
-      path: '/login',
-      exact: true,
-      name: 'Login',
-      title: 'site.login',
-      locale: 'menu.login',
-      component: '@/page/login',
-      hideInNav: true,
-      hideInMenu: true,
-    },
-  ],
+  routes,
 });
