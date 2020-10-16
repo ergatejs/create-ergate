@@ -7,6 +7,6 @@ export default class AppBootHook {
     this.agent = agent;
   }
 
-  async didLoad() {    
-  }
+  // async didLoad() {    
+  // }
 }
