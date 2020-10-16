@@ -1,3 +1,3 @@
-## @ergatejs/boilerplate-typescript-egg
+## @ergatejs/boilerplate-typescript-egg-pugin
 
-> boilerplate using typescript && egg + umi.
+> boilerplate using typescript && egg-plugin.
