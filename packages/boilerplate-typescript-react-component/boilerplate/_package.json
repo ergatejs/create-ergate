@@ -1,0 +1,29 @@
+{
+  "name": "{{name}}",
+  "version": "1.2.2",
+  "description": "{{description}}",
+  "license": "MIT",
+  "scripts": {
+    "build": "father-build",
+    "prettier": "npx prettier --write ."
+  },
+  "files": ["es", "src"],
+  "sideEffects": ["./**/*.less"],
+  "peerDependencies": {
+    "react": "^17.x"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "^17.0.39",
+    "father-build": "^1.21.1",
+    "react": "^17.0.2",
+    "prettier": "^2.5.1"
+  },
+  "homepage": "{{repository}}",
+  "repository": {
+    "type": "git",
+    "url": "{{repository}}"
+  },
+  "bugs": "{{repository}}/issues",
+  "author": "{{author}}"
+}
