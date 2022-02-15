@@ -12,6 +12,6 @@ declare module 'egg' {
     api: {
       auth: ExportApiAuth;
       info: ExportApiInfo;
-    }
+    };
   }
 }

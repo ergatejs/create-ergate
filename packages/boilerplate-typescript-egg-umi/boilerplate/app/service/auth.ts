@@ -4,7 +4,10 @@ import { Member } from '../model/member';
 export default class AuthService extends Service {
   public signJWTToekn(member: Member) {
     const { app } = this;
-    const { jwtAlgorithm, jwt: { secret } } = app.config;
+    const {
+      jwtAlgorithm,
+      jwt: { secret },
+    } = app.config;
 
     const { id, email, role } = member;
 
@@ -13,7 +16,7 @@ export default class AuthService extends Service {
       email,
       role,
       'https://hasura.io/jwt/claims': {
-        'x-hasura-allowed-roles': [ 'admin', 'user', 'mod' ],
+        'x-hasura-allowed-roles': ['admin', 'user', 'mod'],
         'x-hasura-default-role': role,
         'x-hasura-user-id': `${id}`,
         'x-hasura-user-email': email,

@@ -16,10 +16,18 @@ let g_intl: IntlShape;
 
 const useLocalStorage = true;
 
-export const localeInfo: {[key: string]: any} = {
+export const localeInfo: { [key: string]: any } = {
   'en-US': {
     messages: {
-      ...((locale) => locale.__esModule ? locale.default : locale)(require('/Users/suyi/gpm/github.com/ergatejs/boilerplate/app/view/locale/en-US.ts')),...((locale) => locale.__esModule ? locale.default : locale)(require('/Users/suyi/gpm/github.com/ergatejs/boilerplate/app/view/page/info/locale/en-US.ts')),...((locale) => locale.__esModule ? locale.default : locale)(require('/Users/suyi/gpm/github.com/ergatejs/boilerplate/app/view/page/login/locale/en-US.ts')),
+      ...((locale) => (locale.__esModule ? locale.default : locale))(
+        require('/Users/suyi/gpm/github.com/ergatejs/boilerplate/app/view/locale/en-US.ts'),
+      ),
+      ...((locale) => (locale.__esModule ? locale.default : locale))(
+        require('/Users/suyi/gpm/github.com/ergatejs/boilerplate/app/view/page/info/locale/en-US.ts'),
+      ),
+      ...((locale) => (locale.__esModule ? locale.default : locale))(
+        require('/Users/suyi/gpm/github.com/ergatejs/boilerplate/app/view/page/login/locale/en-US.ts'),
+      ),
     },
     locale: 'en-US',
     antd: {
@@ -29,7 +37,15 @@ export const localeInfo: {[key: string]: any} = {
   },
   'zh-CN': {
     messages: {
-      ...((locale) => locale.__esModule ? locale.default : locale)(require('/Users/suyi/gpm/github.com/ergatejs/boilerplate/app/view/locale/zh-CN.ts')),...((locale) => locale.__esModule ? locale.default : locale)(require('/Users/suyi/gpm/github.com/ergatejs/boilerplate/app/view/page/info/locale/zh-CN.ts')),...((locale) => locale.__esModule ? locale.default : locale)(require('/Users/suyi/gpm/github.com/ergatejs/boilerplate/app/view/page/login/locale/zh-CN.ts')),
+      ...((locale) => (locale.__esModule ? locale.default : locale))(
+        require('/Users/suyi/gpm/github.com/ergatejs/boilerplate/app/view/locale/zh-CN.ts'),
+      ),
+      ...((locale) => (locale.__esModule ? locale.default : locale))(
+        require('/Users/suyi/gpm/github.com/ergatejs/boilerplate/app/view/page/info/locale/zh-CN.ts'),
+      ),
+      ...((locale) => (locale.__esModule ? locale.default : locale))(
+        require('/Users/suyi/gpm/github.com/ergatejs/boilerplate/app/view/page/login/locale/zh-CN.ts'),
+      ),
     },
     locale: 'zh-CN',
     antd: {
@@ -49,8 +65,8 @@ export const addLocale = (
   name: string,
   messages: Object,
   extraLocales: {
-    momentLocale:string;
-    antd:string
+    momentLocale: string;
+    antd: string;
   },
 ) => {
   if (!name) {
@@ -82,20 +98,20 @@ export const getIntl = (locale?: string, changeIntl?: boolean) => {
     return g_intl;
   }
   // 如果存在于 localeInfo 中
-  if (locale&&localeInfo[locale]) {
+  if (locale && localeInfo[locale]) {
     return createIntl(localeInfo[locale]);
   }
   // 不存在需要一个报错提醒
   warning(
-    !locale||!!localeInfo[locale],
+    !locale || !!localeInfo[locale],
     `The current popular language does not exist, please check the locale folder!`,
   );
   // 使用 zh-CN
-  if (localeInfo["zh-CN"]) return createIntl(localeInfo["zh-CN"]);
+  if (localeInfo['zh-CN']) return createIntl(localeInfo['zh-CN']);
 
   // 如果还没有，返回一个空的
   return createIntl({
-    locale: "zh-CN",
+    locale: 'zh-CN',
     messages: {},
   });
 };
@@ -135,7 +151,7 @@ export const getLocale = () => {
   browserLang = isNavigatorLanguageValid
     ? navigator.language.split('-').join('-')
     : '';
-  return lang || browserLang || "zh-CN";
+  return lang || browserLang || 'zh-CN';
 };
 
 /**

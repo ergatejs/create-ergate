@@ -17,7 +17,7 @@ import {
 
 import { ApplyPluginsType } from 'umi';
 import { history, plugin } from '../core/umiExports';
-            
+
 import { message, notification } from 'antd';
 import useUmiRequest from '/Users/suyi/gpm/github.com/ergatejs/boilerplate/node_modules/@umijs/use-request';
 import {
@@ -43,7 +43,7 @@ function useRequest<
   R = any,
   P extends any[] = any,
   U = any,
-  UU extends U = any
+  UU extends U = any,
 >(
   service: CombineService<R, P>,
   options: OptionsWithFormat<R, P, U, UU>,
@@ -58,7 +58,7 @@ function useRequest<R extends LoadMoreFormatReturn = any, RR = any>(
 ): LoadMoreResult<R>;
 function useRequest<
   R extends ResultWithData<LoadMoreFormatReturn> = any,
-  RR extends R = any
+  RR extends R = any,
 >(
   service: CombineService<R, LoadMoreParams<R['data']>>,
   options: LoadMoreOptions<RR['data']>,
@@ -77,7 +77,7 @@ function useRequest<Item = any, U extends Item = any>(
 ): PaginatedResult<Item>;
 function useRequest(service: any, options: any = {}) {
   return useUmiRequest(service, {
-    formatResult: result => result?.data,
+    formatResult: (result) => result?.data,
     requestMethod: (requestOptions: any) => {
       if (typeof requestOptions === 'string') {
         return request(requestOptions);
@@ -146,7 +146,7 @@ const getRequestMethod = () => {
   });
 
   const errorAdaptor =
-    requestConfig.errorConfig?.adaptor || (resData => resData);
+    requestConfig.errorConfig?.adaptor || ((resData) => resData);
 
   requestMethodInstance = extend({
     errorHandler: (error: RequestError) => {
@@ -234,17 +234,17 @@ const getRequestMethod = () => {
 
   // Add user custom middlewares
   const customMiddlewares = requestConfig.middlewares || [];
-  customMiddlewares.forEach(mw => {
+  customMiddlewares.forEach((mw) => {
     requestMethodInstance.use(mw);
   });
 
   // Add user custom interceptors
   const requestInterceptors = requestConfig.requestInterceptors || [];
   const responseInterceptors = requestConfig.responseInterceptors || [];
-  requestInterceptors.map(ri => {
+  requestInterceptors.map((ri) => {
     requestMethodInstance.interceptors.request.use(ri);
   });
-  responseInterceptors.map(ri => {
+  responseInterceptors.map((ri) => {
     requestMethodInstance.interceptors.response.use(ri);
   });
 

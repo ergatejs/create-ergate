@@ -11,20 +11,22 @@ export class Member extends Model {
 }
 
 export default (app: Application) => {
-
-  Member.init({
-    id: {
-      type: DataTypes.UUID,
-      primaryKey: true,
+  Member.init(
+    {
+      id: {
+        type: DataTypes.UUID,
+        primaryKey: true,
+      },
+      email: DataTypes.TEXT,
+      avatar: DataTypes.TEXT,
+      role: DataTypes.TEXT,
+      salt: DataTypes.TEXT,
+      hash: DataTypes.TEXT,
     },
-    email: DataTypes.TEXT,
-    avatar: DataTypes.TEXT,
-    role: DataTypes.TEXT,
-    salt: DataTypes.TEXT,
-    hash: DataTypes.TEXT,
-  }, {
-    sequelize: app.model,
-  });
+    {
+      sequelize: app.model,
+    },
+  );
 
   return Member;
 };

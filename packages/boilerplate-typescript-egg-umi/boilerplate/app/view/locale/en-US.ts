@@ -1,8 +1,8 @@
 export default {
   'site.title': 'Boilerplate',
-  
-  'site.index': 'Index',  
-  'site.info': 'Info',  
+
+  'site.index': 'Index',
+  'site.info': 'Info',
   'site.login': 'Login',
 
   'menu.index': 'Home',

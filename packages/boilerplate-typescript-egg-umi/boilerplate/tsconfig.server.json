@@ -23,8 +23,5 @@
     "inlineSourceMap": true,
     "importHelpers": true
   },
-  "exclude": [
-    "node_modules*",
-    "app/view"
-  ]
+  "exclude": ["node_modules*", "app/view"]
 }

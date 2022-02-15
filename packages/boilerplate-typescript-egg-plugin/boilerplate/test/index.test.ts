@@ -18,6 +18,6 @@ describe('test/index.test.ts', async () => {
       await app.ready();
 
       // assert(app.{{name}});
-    });    
-  });  
+    });
+  });
 });

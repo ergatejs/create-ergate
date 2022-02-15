@@ -6,11 +6,13 @@
   "license": "MIT",
   "devDependencies": {
     "egg-ci": "^1.15.0",
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "prettier": "^2.5.1"
   },
   "scripts": {
     "ci": "npm run bootstrap && npm run run-ci && npm run run-clean",
     "bootstrap": "lerna bootstrap",
+    "prettier": "npx prettier --write .",
     "run-ci": "lerna run ci --stream",
     "run-clean": "lerna run clean-dist --stream"
   },

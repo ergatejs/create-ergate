@@ -1,7 +1,7 @@
 import { createBrowserHistory } from '/Users/suyi/gpm/github.com/ergatejs/boilerplate/node_modules/@umijs/runtime';
 
 let options = {
-  "basename": "/"
+  basename: '/',
 };
 if ((<any>window).routerBase) {
   options.basename = (<any>window).routerBase;

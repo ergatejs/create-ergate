@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-  request, useModel, history, useIntl,
-} from 'umi';
-import {
-  Form, Input, Checkbox, Button, Card, Row, Col,
-} from 'antd';
+import { request, useModel, history, useIntl } from 'umi';
+import { Form, Input, Checkbox, Button, Card, Row, Col } from 'antd';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 
 export default () => {

@@ -11,14 +11,16 @@ export function patchRoutes({ routes }) {
   // loop all route for patch title field
   const intl = getIntl(getLocale());
   const traverseRoute = (routes) => {
-    routes.forEach(route => {
+    routes.forEach((route) => {
       if (route.title) {
-        route.title = intl.messages[route.title] ? intl.formatMessage({ id: route.title }, {}) : route.title;
+        route.title = intl.messages[route.title]
+          ? intl.formatMessage({ id: route.title }, {})
+          : route.title;
       }
       if (route.routes) {
         traverseRoute(route.routes);
       }
-    })
-  }
+    });
+  };
   traverseRoute(routes);
 }

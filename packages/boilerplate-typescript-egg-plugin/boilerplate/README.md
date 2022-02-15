@@ -27,7 +27,7 @@ add to config
 // config/config.{env}.ts
 
 export default {
-  {{name}}: {   
+  {{name}}: {
   },
 }
 ```

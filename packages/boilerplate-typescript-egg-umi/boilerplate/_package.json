@@ -86,9 +86,7 @@
     "type": "git",
     "url": ""
   },
-  "eslintIgnore": [
-    "coverage"
-  ],
+  "eslintIgnore": ["coverage"],
   "author": "{{author}}",
   "license": "MIT"
 }

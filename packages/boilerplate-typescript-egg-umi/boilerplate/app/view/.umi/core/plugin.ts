@@ -1,7 +1,18 @@
 import { Plugin } from '/Users/suyi/gpm/github.com/ergatejs/boilerplate/node_modules/@umijs/runtime';
 
 const plugin = new Plugin({
-  validKeys: ['patchRoutes','rootContainer','render','onRouteChange','dva','getInitialState','locale','locale','layout','request',],
+  validKeys: [
+    'patchRoutes',
+    'rootContainer',
+    'render',
+    'onRouteChange',
+    'dva',
+    'getInitialState',
+    'locale',
+    'locale',
+    'layout',
+    'request',
+  ],
 });
 plugin.register({
   apply: require('/Users/suyi/gpm/github.com/ergatejs/boilerplate/app/view/app.ts'),

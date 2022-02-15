@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  Link, useIntl, history, useModel,
-} from 'umi';
+import { Link, useIntl, history, useModel } from 'umi';
 import { Dropdown, Menu, Avatar } from 'antd';
 
 const AuthInfo: React.FC<Props> = (props) => {
@@ -33,9 +31,7 @@ const AuthInfo: React.FC<Props> = (props) => {
 
   const loginText = intl.formatMessage({ id: 'menu.login' });
 
-  return (
-    <Link to="/login">{loginText}</Link>
-  );
+  return <Link to="/login">{loginText}</Link>;
 };
 
 export default AuthInfo;

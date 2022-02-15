@@ -1,4 +1,3 @@
-
 if (window.g_initWebpackHotDevClient) {
   window.g_initWebpackHotDevClient({
     tryApplyUpdates(onHotUpdateSuccess?: Function) {
@@ -42,7 +41,6 @@ if (window.g_initWebpackHotDevClient) {
           handleApplyUpdates(err, null);
         },
       );
-    }
+    },
   });
 }
-      

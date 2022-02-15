@@ -9,23 +9,20 @@ export * from '/Users/suyi/gpm/github.com/ergatejs/boilerplate/app/view/model/gl
 export * from '/Users/suyi/gpm/github.com/ergatejs/boilerplate/app/view/page/info/model';
 
 export interface Action<T = any> {
-  type: T
+  type: T;
 }
 
 export type Reducer<S = any, A extends Action = AnyAction> = (
   state: S | undefined,
-  action: A
+  action: A,
 ) => S;
 
 export type ImmerReducer<S = any, A extends Action = AnyAction> = (
   state: S,
-  action: A
+  action: A,
 ) => void;
 
-export type Effect = (
-  action: AnyAction,
-  effects: EffectsCommandMap,
-) => void;
+export type Effect = (action: AnyAction, effects: EffectsCommandMap) => void;
 
 /**
  * @type P: Type of payload
@@ -38,7 +35,10 @@ export type Dispatch = <P = any, C = (payload: P) => void>(action: {
   [key: string]: any;
 }) => any;
 
-export type Subscription = (api: SubscriptionAPI, done: Function) => void | Function;
+export type Subscription = (
+  api: SubscriptionAPI,
+  done: Function,
+) => void | Function;
 
 export interface Loading {
   global: boolean;
@@ -51,7 +51,10 @@ export interface Loading {
 /**
  * @type P: Params matched in dynamic routing
  */
-export interface ConnectProps<P extends { [K in keyof P]?: string } = {}, S = LocationState> {
+export interface ConnectProps<
+  P extends { [K in keyof P]?: string } = {},
+  S = LocationState,
+> {
   dispatch?: Dispatch;
   // https://github.com/umijs/umi/pull/2194
   match?: match<P>;
@@ -64,4 +67,7 @@ export interface ConnectProps<P extends { [K in keyof P]?: string } = {}, S = Lo
  * @type T: React props
  * @type U: match props types
  */
-export type ConnectRC<T = {}, U = {}> = React.ForwardRefRenderFunction<any, T & ConnectProps<U>>;
+export type ConnectRC<T = {}, U = {}> = React.ForwardRefRenderFunction<
+  any,
+  T & ConnectProps<U>
+>;

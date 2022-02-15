@@ -14,10 +14,13 @@ export interface AccessProps {
   fallback?: React.ReactNode;
 }
 
-export const Access: React.FC<AccessProps> = props => {
+export const Access: React.FC<AccessProps> = (props) => {
   const { accessible, fallback, children } = props;
 
-  if (process.env.NODE_ENV === 'development' && typeof accessible === 'function') {
+  if (
+    process.env.NODE_ENV === 'development' &&
+    typeof accessible === 'function'
+  ) {
     console.warn(
       '[plugin-access]: provided "accessible" prop is a function named "' +
         (accessible as Function).name +

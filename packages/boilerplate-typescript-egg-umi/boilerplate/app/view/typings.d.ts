@@ -8,8 +8,8 @@ interface Window {
     auth: {
       info: {
         role: string;
-      },
+      };
       token: string;
-    };    
+    };
   };
 }

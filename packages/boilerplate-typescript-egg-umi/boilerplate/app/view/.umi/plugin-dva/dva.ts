@@ -5,7 +5,7 @@ import dva from 'dva';
 import createLoading from '/Users/suyi/gpm/github.com/ergatejs/boilerplate/node_modules/dva-loading/dist/index.esm.js';
 import { plugin, history } from '../core/umiExports';
 
-let app:any = null;
+let app: any = null;
 
 function _onCreate() {
   const runtimeDva = plugin.applyPlugins({
@@ -15,19 +15,29 @@ function _onCreate() {
   });
   app = dva({
     history,
-    
+
     ...(runtimeDva.config || {}),
     // @ts-ignore
     ...(window.g_useSSR ? { initialState: window.g_initialData } : {}),
   });
-  
+
   app.use(createLoading());
-  app.use(require('/Users/suyi/gpm/github.com/ergatejs/boilerplate/node_modules/dva-immer/dist/index.js')());
-  (runtimeDva.plugins || []).forEach((plugin:any) => {
+  app.use(
+    require('/Users/suyi/gpm/github.com/ergatejs/boilerplate/node_modules/dva-immer/dist/index.js')(),
+  );
+  (runtimeDva.plugins || []).forEach((plugin: any) => {
     app.use(plugin);
   });
-  app.model({ namespace: 'global', ...(require('/Users/suyi/gpm/github.com/ergatejs/boilerplate/app/view/model/global.ts').default) });
-app.model({ namespace: 'model', ...(require('/Users/suyi/gpm/github.com/ergatejs/boilerplate/app/view/page/info/model.ts').default) });
+  app.model({
+    namespace: 'global',
+    ...require('/Users/suyi/gpm/github.com/ergatejs/boilerplate/app/view/model/global.ts')
+      .default,
+  });
+  app.model({
+    namespace: 'model',
+    ...require('/Users/suyi/gpm/github.com/ergatejs/boilerplate/app/view/page/info/model.ts')
+      .default,
+  });
   return app;
 }
 
@@ -43,7 +53,7 @@ export class _DvaContainer extends Component {
 
   componentWillUnmount() {
     let app = getApp();
-    app._models.forEach((model:any) => {
+    app._models.forEach((model: any) => {
       app.unmodel(model.namespace);
     });
     app._models = [];
@@ -51,7 +61,7 @@ export class _DvaContainer extends Component {
       // 释放 app，for gc
       // immer 场景 app 是 read-only 的，这里 try catch 一下
       app = null;
-    } catch(e) {
+    } catch (e) {
       console.error(e);
     }
   }
