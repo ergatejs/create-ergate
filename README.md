@@ -25,7 +25,8 @@ $ npx create-egg showcase-react --package=@ergatejs/boilerplate-typescript-react
 
 ## Contributors
 
-[![contributors](https://badges.implements.io/api/contributors?org=ergatejs&repo=create-ergate&width=1280&size=48&padding=6&type=jpeg)](https://github.com/ergatejs/create-ergate/graphs/contributors)
+[![contributors](https://ergatejs.implements.io/badges/contributors/ergatejs/create-ergate.svg)](https://github.com/ergatejs/create-ergate/graphs/contributors)
+
 
 ## How to Contribute
 
